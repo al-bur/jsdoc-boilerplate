@@ -1,51 +1,35 @@
 /**
- * Represents a book.
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * 자판기를 만들어준다.
+ * @class
  */
-function Book(title, author) {}
+class VendingMachine {
+  /**
+   * 아이스 아메리카노랑 따뜻한 아메리카노 가지고 있는 총 개수
+   */
+  constructor() {}
 
-/**
- * Both of these will link to the bar function.
- * @see {@link bar}
- * @see bar
- */
-function foo() {}
+  /**
+   * @param {number} money - 자판기에 투입한 금액
+   * @return {string} - 구매 결과를 반환한다.
+   */
+  getItem(money) {}
 
-// Use the inline {@link} tag to include a link within a free-form description.
-/**
- * @see {@link foo} for further information.
- * @see {@link http://github.com|GitHub}
- */
-function bar() {}
+  /**
+   * 투입금액이 1000원 이상이면 아이스 아메리카노, 1000원 미만이면 따뜻한 아메리카노를 반환한다.
+   * @param {number} money - 자판기에 투입한 금액
+   * @return {string} - 아메리카노 종류를 반환한다.
+   */
+  defineAmericano(money) {}
 
-/**
- * Generic dairy product.
- * @constructor
- */
-function DairyProduct() {}
+  /**
+   * 구매결과를 콘솔에 출력한다.
+   * @param {string} purchaseResult - 구매 결과
+   */
+  printResult(purchaseResult) {}
 
-/**
- * Check whether the dairy product is solid at room temperature.
- * @abstract
- * @return {boolean}
- */
-DairyProduct.prototype.isSolid = function () {
-	throw new Error('must be implemented by subclass!');
-};
-
-/**
- * Cool, refreshing milk.
- * @constructor
- * @augments DairyProduct
- */
-function Milk() {}
-
-/**
- * Check whether milk is solid at room temperature.
- * @return {boolean} Always returns false.
- */
-Milk.prototype.isSolid = function () {
-	return false;
-};
+  /**
+   * 주어진 아메리카노 종류 개수를 1개 감소시킨다.
+   * @param {string} americaoType - 아메리카노 종류
+   */
+  decreaseAmount(americaoType) {}
+}
